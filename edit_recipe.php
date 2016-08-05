@@ -2,7 +2,7 @@
 <html>
 <body>
 
-<form action="recipe_view.php" method="post">
+<form action="view_recipe.php" method="post">
     Title: <input type="text" name="title"><br>
     Ingredients: <input type="text" name="ingredients"><br>
     Instructions: <input type="text" name="instructions"><br>

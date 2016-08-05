@@ -21,18 +21,6 @@ if (isset($_POST["uname"])){
     fwrite($unamefile, $uname . "\n");
     fclose($unamefile);
 
-    # make a new folder if it's a new name
-    #if (file_exists($uname) == FALSE){
-        #mkdir( $uname );
-    #}
-
-    # make a database
-    #class RecDB extends SQLite3{
-        #function __construct(){
-            #$this->open("test.db");
-        #}
-    #}
-    #$db = new RecDB($uname);
     $db = new PDO("sqlite:" . "db/" . $_POST["uname"] . ".db");
     $sql = <<<EOD
         CREATE TABLE IF NOT EXISTS recipes (
@@ -54,6 +42,17 @@ echo "Welcome " . $_SESSION["uname"];
 </form>
 
 Recipes:
+<br>
+
+<?php
+$db = new PDO("sqlite:" . "db/" . $_SESSION["uname"] . ".db");
+$result = $db->query("SELECT * FROM recipes");
+foreach($result as $row){
+    echo "<a href=view_recipe.php?rec=" . $row["title"] . ">";
+    echo $row["title"] . "</a>";
+    echo "<br>";
+}
+?>
 
 </body>
 </html>
