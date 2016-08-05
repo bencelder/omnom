@@ -1,57 +1,12 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
+    <body>
 
-<head>
-<style>
-    div.mainframe{
-        border: 1px solid gray;
+<?php session_unset() ?>
+<form action="main.php" method="post">
+    Username: <input type="text" name="uname"><br>
+    <input type="submit">
+</form>
 
-    }
-    header{
-        text-align: center;
-        border: 1px solid gray;
-    }
-    nav{
-        float: left;
-        padding: 1em;
-        border: 1px solid blue;
-    }
-    nav ul{
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-    }
-    nav ul a{
-        text-decoration: none;
-    }
-    article{
-        border-left: 1px solid gray;
-        margin-left: 170px;
-        padding: 1em;
-    }
-</style>
-
-</head>
-
-<div class="mainframe">
-<body>
-    <header>
-    omnom!
-    </header>
-    <nav>
-        <button>Add recipe</button>
-        <ul>
-            <li><a href="asdf">list</a></li>
-            <li><a href="asdf">of</a></li>
-            <li><a href="asdf">recipes</a></li>
-        </ul>
-    </nav>
-    <article>
-        <h1>Recipe name</h1>
-        <p>Ingredients</p>
-        <p>Instructions</p>
-        <button>Edit recipe</button>
-    </article>
-</div>
 </body>
 </html>
