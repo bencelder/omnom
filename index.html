@@ -1,12 +1,10 @@
-<!DOCTYPE HTML>
 <html>
-    <body>
-
-<?php session_unset() ?>
-<form action="main.php" method="post">
-    Username: <input type="text" name="uname"><br>
-    <input type="submit">
-</form>
-
+<body>
+    Welcome to omnom!<br>
+    <form action="cgi-bin/omnom.py">
+        Username:
+        <input type="text" name="uname"><br>
+        <input type="submit" value="Submit">
+    </form>
 </body>
 </html>
